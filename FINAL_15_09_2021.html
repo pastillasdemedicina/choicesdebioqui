@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Bioquímica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            background: #ffffff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .question h2 {
+            font-size: 1.2em;
+        }
+        .question label {
+            display: block;
+            margin: 5px 0;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1em;
+            background: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Preguntas de Bioquímica</h1>
+    <form id="quizForm">
+        <!-- Pregunta 1 -->
+        
+
+
+
+
+
+
+
+        <!-- Pregunta 1 -->
+        <div class="question">
+            <h2>1. Las ligasas son enzimas que:</h2>
+            <label><input type="radio" name="q1" value="a"> Forman enlaces entre C y O, N, S u otros átomos, generalmente, utilizando energía de hidrólisis del ATP.</label>
+            <label><input type="radio" name="q1" value="b"> Catalizan reacciones endergónicas al comienzo de una vía metabólica.</label>
+            <label><input type="radio" name="q1" value="c"> Transfieren grupos fosfato entre distintos sustratos ricos en hidroxilos.</label>
+            <label><input type="radio" name="q1" value="d"> Catalizan la ruptura de enlaces químicos, excluyendo enlaces peptídicos, por un proceso distinto al de la hidrólisis.</label>
+            <div class="feedback" id="feedback-q1"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="question">
+            <h2>2. En una dieta hiperglucídica:</h2>
+            <label><input type="radio" name="q2" value="a"> Se inhibe la piruvato deshidrogenasa y con ella, todo el ciclo de Krebs.</label>
+            <label><input type="radio" name="q2" value="b"> Se activa la glucógeno sintetasa y se inhibe la glucosa 6 P deshidrogenasa.</label>
+            <label><input type="radio" name="q2" value="c"> Se produce una activación de la piruvato carboxilasa.</label>
+            <label><input type="radio" name="q2" value="d"> Se inhibe la fructosa 2-6 difosfatasa y se activa la fosfofructoquinasa 2.</label>
+            <div class="feedback" id="feedback-q2"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="question">
+            <h2>3. Se prepara una solución disolviendo 50 g de KCl en 459 g de agua. Calcular la concentración de la solución expresada en porcentaje masa/masa:</h2>
+            <label><input type="radio" name="q3" value="a"> 12.36% m/m.</label>
+            <label><input type="radio" name="q3" value="b"> 3.26% m/m.</label>
+            <div class="feedback" id="feedback-q3"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="question">
+            <h2>4. ¿Cuál de las siguientes enfermedades obedece a una alteración de la síntesis de novo de bases pirimídicas?</h2>
+            <label><input type="radio" name="q4" value="a"> Enfermedad de Fabry.</label>
+            <label><input type="radio" name="q4" value="b"> Enfermedad de Lesch-Nyhan.</label>
+            <label><input type="radio" name="q4" value="c"> Aciduria orótica.</label>
+            <label><input type="radio" name="q4" value="d"> Alcaptonuria.</label>
+            <div class="feedback" id="feedback-q4"></div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="question">
+            <h2>5. La fórmula de Friedewald para el cálculo de LDL es:</h2>
+            <label><input type="radio" name="q5" value="a"> Colesterol total - HDLc - Triglicéridos/5.</label>
+            <label><input type="radio" name="q5" value="b"> Colesterol total/5 - HDLc + Triglicéridos.</label>
+            <label><input type="radio" name="q5" value="c"> Triglicéridos + HDL - Colesterol/5.</label>
+            <label><input type="radio" name="q5" value="d"> Colesterol total - Triglicéridos + HDL/5.</label>
+            <div class="feedback" id="feedback-q5"></div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="question">
+            <h2>6. La porfiria intermitente aguda es causa de dolor abdominal agudo. La enzima deficitaria es:</h2>
+            <label><input type="radio" name="q6" value="a"> Glucuronil transferasa.</label>
+            <label><input type="radio" name="q6" value="b"> Ferro quelatasa.</label>
+            <label><input type="radio" name="q6" value="c"> Delta ALA sintetasa.</label>
+            <label><input type="radio" name="q6" value="d"> Porfobilinógeno desaminasa.</label>
+            <div class="feedback" id="feedback-q6"></div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="question">
+            <h2>7. La descarboxilación oxidativa del alfa-ceto-glutarato requiere:</h2>
+            <label><input type="radio" name="q7" value="a"> Pirofosfato de tiamina.</label>
+            <label><input type="radio" name="q7" value="b"> Fosfato de piridoxal.</label>
+            <label><input type="radio" name="q7" value="c"> NADP.</label>
+            <label><input type="radio" name="q7" value="d"> Biotina.</label>
+            <div class="feedback" id="feedback-q7"></div>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="question">
+            <h2>8. Un paciente tiene una glucemia de 6.6 mmoles/l. ¿Es normal, alta o baja? Pasar a mg/dl y g/l (PM glucosa: 180).</h2>
+            <label><input type="radio" name="q8" value="a"> Es alta; se corresponde a una glucemia de 118 mg/dl; 1.18 g/l.</label>
+            <label><input type="radio" name="q8" value="b"> Es alta; se corresponde a una glucemia de 154 mg/dl; 1.54 g/l.</label>
+            <label><input type="radio" name="q8" value="c"> Es baja; se corresponde a una glucemia de 63 mg/dl; 0.63 g/l.</label>
+            <label><input type="radio" name="q8" value="d"> Es normal; se corresponde a una glucemia de 90 mg/dl; 0.9 g/l.</label>
+            <div class="feedback" id="feedback-q8"></div>
+        </div>
+
+        <!-- Pregunta 9 -->
+        <div class="question">
+            <h2>9. La alcaptonuria es un trastorno hereditario vinculado al metabolismo de:</h2>
+            <label><input type="radio" name="q9" value="a"> L-glutamato.</label>
+            <label><input type="radio" name="q9" value="b"> L-tirosina.</label>
+            <div class="feedback" id="feedback-q9"></div>
+        </div>
+
+
+
+
+
+
+        <!-- Pregunta 10 -->
+        <div class="question">
+            <h2>10. La celobiosa es un disacárido formado por:</h2>
+            <label><input type="radio" name="q10" value="a"> Beta-D-glucopiranosa y beta-D-glucopiranosa en unión beta 1-4.</label>
+            <label><input type="radio" name="q10" value="b"> Beta-D-galactopiranosa y alfa-D-glucopiranosa en unión beta 1-4.</label>
+            <label><input type="radio" name="q10" value="c"> Beta-D-galactopiranosa y beta-D-fructofuranosa en unión beta 2-1.</label>
+            <label><input type="radio" name="q10" value="d"> Alfa-D-glucopiranosa y alfa-D-glucopiranosa en unión alfa 1-4.</label>
+            <div class="feedback" id="feedback-q10"></div>
+        </div>
+
+        <!-- Pregunta 11 -->
+        <div class="question">
+            <h2>11. La diferencia entre bilirrubina directa e indirecta radica en:</h2>
+            <label><input type="radio" name="q11" value="a"> La bilirrubina directa sufre cambios en la luz ultravioleta.</label>
+            <label><input type="radio" name="q11" value="b"> La bilirrubina indirecta da color rojizo con lugol al 2%.</label>
+            <label><input type="radio" name="q11" value="c"> Diferente comportamiento de ambas frente al reactivo de Erlich.</label>
+            <label><input type="radio" name="q11" value="d"> La conjugación o no de ambas con ácido glucurónico.</label>
+            <div class="feedback" id="feedback-q11"></div>
+        </div>
+
+        <!-- Pregunta 12 -->
+        <div class="question">
+            <h2>12. La esteatorrea es la eliminación anormal de grasa de la materia fecal. ¿Cuál de las siguientes causas no la produce?</h2>
+            <label><input type="radio" name="q12" value="a"> Obstrucción de la vía biliar.</label>
+            <label><input type="radio" name="q12" value="b"> Deficiencia de lipasa pancreática.</label>
+            <label><input type="radio" name="q12" value="c"> Aclorhidria.</label>
+            <label><input type="radio" name="q12" value="d"> Síndrome de mala absorción.</label>
+            <div class="feedback" id="feedback-q12"></div>
+        </div>
+
+        <!-- Pregunta 13 -->
+        <div class="question">
+            <h2>13. ¿Cuál de las siguientes enzimas cataliza una reacción anaplerótica?</h2>
+            <label><input type="radio" name="q13" value="a"> Gliceraldehído 3 P deshidrogenasa.</label>
+            <label><input type="radio" name="q13" value="b"> Enzima málica de Ochoa.</label>
+            <label><input type="radio" name="q13" value="c"> Acetil CoA carboxilasa.</label>
+            <label><input type="radio" name="q13" value="d"> PEP carboxiquinasa.</label>
+            <div class="feedback" id="feedback-q13"></div>
+        </div>
+
+        <!-- Pregunta 14 -->
+        <div class="question">
+            <h2>14. ¿Cuál de las siguientes moléculas corresponde estructuralmente a un secoesteroide?</h2>
+            <label><input type="radio" name="q14" value="a"> Citocromo b.</label>
+            <label><input type="radio" name="q14" value="b"> Coenzima Q.</label>
+            <label><input type="radio" name="q14" value="c"> Vitamina D.</label>
+            <label><input type="radio" name="q14" value="d"> Vitamina A.</label>
+            <div class="feedback" id="feedback-q14"></div>
+        </div>
+
+        <!-- Pregunta 15 -->
+        <div class="question">
+            <h2>15. La lipoproteína A:</h2>
+            <label><input type="radio" name="q15" value="a"> Tiene apo B 48, se sintetiza en intestino y es rica en triglicéridos.</label>
+            <label><input type="radio" name="q15" value="b"> Transporta fosfolípidos desde el hígado a los tejidos periféricos.</label>
+            <label><input type="radio" name="q15" value="c"> Es considerada un factor fisiológico de protección contra la aterosclerosis.</label>
+            <div class="feedback" id="feedback-q15"></div>
+        </div>
+
+
+
+
+
+
+        <!-- Pregunta 16 -->
+        <div class="question">
+            <h2>16. Se prepara una solución disolviendo 90 g de NaOH en 100 g de agua. La densidad de la solución es 1,50 g/cm3. Calcular la concentración de la solución expresada como % m/m y % m/v.</h2>
+            <label><input type="radio" name="q16" value="a"> 23,6 % m/m; 33,7 % m/v.</label>
+            <label><input type="radio" name="q16" value="b"> 70,9 % m/m; 100,2 % m/v.</label>
+            <label><input type="radio" name="q16" value="c"> 47,3 % m/m; 67,5 % m/v.</label>
+            <label><input type="radio" name="q16" value="d"> 94,5 % m/m; 133,9 % m/v.</label>
+            <div class="feedback" id="feedback-q16"></div>
+        </div>
+
+        <!-- Pregunta 17 -->
+        <div class="question">
+            <h2>17. El suero glucosado tiene una concentración de 5 g%. Expresarlo en mmoles/l (PM glucosa: 180).</h2>
+            <label><input type="radio" name="q17" value="a"> 278 mmoles/l.</label>
+            <label><input type="radio" name="q17" value="b"> 556 mmoles/l.</label>
+            <label><input type="radio" name="q17" value="c"> 824 mmoles/l.</label>
+            <label><input type="radio" name="q17" value="d"> 1102 mmoles/l.</label>
+            <div class="feedback" id="feedback-q17"></div>
+        </div>
+
+        <!-- Pregunta 18 -->
+        <div class="question">
+            <h2>18. Una paciente de 23 años presenta el siguiente laboratorio: pH: 7,50; pCO2: 40; EB: +4; natremia: 155 mEq/l; potasemia: 2,8 mEq/l. Este laboratorio podría corresponder a:</h2>
+            <label><input type="radio" name="q18" value="a"> Diarrea severa.</label>
+            <label><input type="radio" name="q18" value="b"> Síndrome de Addison.</label>
+            <label><input type="radio" name="q18" value="c"> Hipoventilación.</label>
+            <label><input type="radio" name="q18" value="d"> Síndrome de Cushing.</label>
+            <div class="feedback" id="feedback-q18"></div>
+        </div>
+
+        <!-- Pregunta 19 -->
+        <div class="question">
+            <h2>19. ¿Cuál de los siguientes metabolitos estimula alostéricamente a la acetil CoA carboxilasa y en qué situación metabólica?</h2>
+            <label><input type="radio" name="q19" value="a"> Acetil CoA y ayuno.</label>
+            <label><input type="radio" name="q19" value="b"> ATP y ejercicio muscular.</label>
+            <label><input type="radio" name="q19" value="c"> Citrato y saciedad.</label>
+            <label><input type="radio" name="q19" value="d"> Fructosa 1,6 difosfato y saciedad.</label>
+            <div class="feedback" id="feedback-q19"></div>
+        </div>
+
+        <!-- Pregunta 20 -->
+        <div class="question">
+            <h2>20. La ingesta promedio de sal de un individuo es de 10 g/día. ¿Qué aportes en mEq de Na+ y Cl- representa? (PM NaCl: 58,5).</h2>
+            <label><input type="radio" name="q20" value="a"> 85 mEq.</label>
+            <label><input type="radio" name="q20" value="b"> 365 mEq.</label>
+            <label><input type="radio" name="q20" value="c"> 170 mEq.</label>
+            <label><input type="radio" name="q20" value="d"> 285 mEq.</label>
+            <div class="feedback" id="feedback-q20"></div>
+        </div>
+
+
+
+
+        <!-- Pregunta 21 -->
+        <div class="question">
+            <h2>21. El mayor porcentaje del peso de las HDL está constituido por:</h2>
+            <label><input type="radio" name="q21" value="a"> Proteínas.</label>
+            <label><input type="radio" name="q21" value="b"> Triacilglicéridos.</label>
+            <label><input type="radio" name="q21" value="c"> Fosfolípidos.</label>
+            <label><input type="radio" name="q21" value="d"> Colesterol esterificado.</label>
+            <div class="feedback" id="feedback-q21"></div>
+        </div>
+
+
+
+
+
+        <!-- Pregunta 22 -->
+        <div class="question">
+            <h2>22. La citrulina es:</h2>
+            <label><input type="radio" name="q22" value="a"> Un intermediario en la síntesis de urea.</label>
+            <label><input type="radio" name="q22" value="b"> Un transportador de ácidos grasos para la beta-oxidación.</label>
+            <label><input type="radio" name="q22" value="c"> Un derivado del aminoácido L-glutamato.</label>
+            <label><input type="radio" name="q22" value="d"> Un dador de aminos en la síntesis de pirimidinas.</label>
+            <div class="feedback" id="feedback-q22"></div>
+        </div>
+
+        <!-- Pregunta 23 -->
+        <div class="question">
+            <h2>23. ¿Cuáles son los valores de referencia normales de la uricemia en el hombre?</h2>
+            <label><input type="radio" name="q23" value="a"> 20-40 mg/dl.</label>
+            <label><input type="radio" name="q23" value="b"> 2-3.2 mmoles/l.</label>
+            <label><input type="radio" name="q23" value="c"> 0.7-1.3 mg/dl.</label>
+            <label><input type="radio" name="q23" value="d"> 3.5-7.2 mg/dl.</label>
+            <div class="feedback" id="feedback-q23"></div>
+        </div>
+
+        <!-- Pregunta 24 -->
+        <div class="question">
+            <h2>24. ¿Cuál de las siguientes afirmaciones con respecto al citrato no es correcta?</h2>
+            <label><input type="radio" name="q24" value="a"> Tiene 6 carbonos.</label>
+            <label><input type="radio" name="q24" value="b"> Inhibe a la fosfofructoquinasa 1.</label>
+            <label><input type="radio" name="q24" value="c"> Estimula a la piruvato carboxilasa.</label>
+            <label><input type="radio" name="q24" value="d"> Es un compuesto tricarboxílico.</label>
+            <div class="feedback" id="feedback-q24"></div>
+        </div>
+
+        <!-- Pregunta 25 -->
+        <div class="question">
+            <h2>25. Durante un ayuno prolongado:</h2>
+            <label><input type="radio" name="q25" value="a"> La tioferasa mitocondrial del hepatocito va a activar al acetoacetato.</label>
+            <label><input type="radio" name="q25" value="b"> La actividad de la piruvato deshidrogenasa se ve favorecida.</label>
+            <label><input type="radio" name="q25" value="c"> El glucagón inhibe la acción de la acetil CoA carboxilasa.</label>
+            <label><input type="radio" name="q25" value="d"> El glucagón induce la actividad de la HMG CoA reductasa.</label>
+            <div class="feedback" id="feedback-q25"></div>
+        </div>
+
+        <!-- Pregunta 26 -->
+        <div class="question">
+            <h2>26. ¿Cuál de las siguientes relaciones permite estimar la presencia de LDL pequeñas y densas?</h2>
+            <label><input type="radio" name="q26" value="a"> LDL/Apo B de LDL.</label>
+            <label><input type="radio" name="q26" value="b"> HDL/ApoA1.</label>
+            <label><input type="radio" name="q26" value="c"> Colesterol total/HDL.</label>
+            <label><input type="radio" name="q26" value="d"> Triglicéridos/HDL.</label>
+            <div class="feedback" id="feedback-q26"></div>
+        </div>
+
+        <!-- Pregunta 27 -->
+        <div class="question">
+            <h2>27. ¿Cuál de los siguientes nutrientes posee mayor índice glucémico?</h2>
+            <label><input type="radio" name="q27" value="a"> Sacarosa.</label>
+            <label><input type="radio" name="q27" value="b"> Fructosa.</label>
+            <label><input type="radio" name="q27" value="c"> Lactosa.</label>
+            <label><input type="radio" name="q27" value="d"> Glucosa.</label>
+            <div class="feedback" id="feedback-q27"></div>
+        </div>
+
+
+        <!-- Pregunta 28 -->
+        <div class="question">
+            <h2>28. La hipercolesterolemia familiar se asocia a:</h2>
+            <label><input type="radio" name="q28" value="a"> Pancreatitis aguda.</label>
+            <label><input type="radio" name="q28" value="b"> Dolores abdominales frecuentes.</label>
+            <label><input type="radio" name="q28" value="c"> Hematuria recurrente.</label>
+            <label><input type="radio" name="q28" value="d"> Xantomas tendinosos.</label>
+            <div class="feedback" id="feedback-q28"></div>
+        </div>
+
+        <!-- Pregunta 29 -->
+        <div class="question">
+            <h2>29. Un paciente presenta una glucemia en ayunas de 165 mg/dl. ¿Cuál será su actitud diagnóstica?</h2>
+            <label><input type="radio" name="q29" value="a"> Solicitar una nueva glucemia en ayunas.</label>
+            <label><input type="radio" name="q29" value="b"> Solicitar una prueba oral de tolerancia a la glucosa.</label>
+            <label><input type="radio" name="q29" value="c"> Se trata de una diabetes mellitus.</label>
+            <label><input type="radio" name="q29" value="d"> Solicitar la medición de hemoglobina glicosilada.</label>
+            <div class="feedback" id="feedback-q29"></div>
+        </div>
+
+        <!-- Pregunta 30 -->
+        <div class="question">
+            <h2>30. ¿Cuál de los siguientes marcadores es utilizado para el seguimiento de una paciente con cáncer de páncreas?</h2>
+            <label><input type="radio" name="q30" value="a"> Alfa-feto-proteína.</label>
+            <label><input type="radio" name="q30" value="b"> CA 125.</label>
+            <label><input type="radio" name="q30" value="c"> CA 15.3.</label>
+            <label><input type="radio" name="q30" value="d"> CA 19.9.</label>
+            <div class="feedback" id="feedback-q30"></div>
+        </div>
+
+        <!-- Pregunta 31 -->
+        <div class="question">
+            <h2>31. Ana Pérez tiene una hemoglobinemia de 8,9 g%; con 5.600.000 glóbulos rojos/mm3 microcíticos e hipocrómicos. ¿Qué actitud adoptaría como médico?</h2>
+            <label><input type="radio" name="q31" value="a"> Le diría que aumente la ingesta de carnes y derivados y la citaría en 3 meses para nuevo control.</label>
+            <label><input type="radio" name="q31" value="b"> Le administraría ácido fólico durante 3 meses y repetiría análisis.</label>
+            <label><input type="radio" name="q31" value="c"> Le solicitaría una corrida electroforética de la hemoglobina por sospecha de talasemia.</label>
+            <label><input type="radio" name="q31" value="d"> Trataría a la paciente con hierro por vía oral hasta corregir la anemia.</label>
+            <div class="feedback" id="feedback-q31"></div>
+        </div>
+
+        <!-- Pregunta 32 -->
+        <div class="question">
+            <h2>32. En el estado de ayuno:</h2>
+            <label><input type="radio" name="q32" value="a"> Aumenta la actividad de la glucosa 6 P deshidrogenasa.</label>
+            <label><input type="radio" name="q32" value="b"> Aumenta la actividad de la PEP carboxiquinasa.</label>
+            <label><input type="radio" name="q32" value="c"> Se activan las enzimas fosfofructoquinasa 1 y 2.</label>
+            <label><input type="radio" name="q32" value="d"> Se activa la cetogénesis y la lipogénesis.</label>
+            <div class="feedback" id="feedback-q32"></div>
+        </div>
+
+
+
+        <!-- Pregunta 33 -->
+        <div class="question">
+            <h2>33. Un paciente presenta una uremia de 79 mg/dl y una creatininemia de 0,9 mg/dl. Su interpretación es:</h2>
+            <label><input type="radio" name="q33" value="a"> Deshidratación.</label>
+            <label><input type="radio" name="q33" value="b"> Insuficiencia renal.</label>
+            <label><input type="radio" name="q33" value="c"> Insuficiencia hepática.</label>
+            <label><input type="radio" name="q33" value="d"> Son valores normales.</label>
+            <div class="feedback" id="feedback-q33"></div>
+        </div>
+
+
+        <!-- Pregunta 34 -->
+        <div class="question">
+            <h2>34. Una paciente le consulta por un examen de orina que muestra: orina de aspecto turbio; pH:6; sedimento de orina: abundantes células, leucocitos: 0-2/campo; eritrocitos: 0-2/campo; ausencia de piocitos; bacterias ++++. ¿Cómo lo interpreta?</h2>
+            <label><input type="radio" name="q34" value="a"> Examen de orina normal.</label>
+            <label><input type="radio" name="q34" value="b"> Contaminación bacteriana.</label>
+            <label><input type="radio" name="q34" value="c"> Infección urinaria aguda.</label>
+            <label><input type="radio" name="q34" value="d"> Infección renal.</label>
+            <div class="feedback" id="feedback-q34"></div>
+        </div>
+
+        <!-- Pregunta 35 -->
+        <div class="question">
+            <h2>35. En el AMPc la unión química intramolecular que se establece en la aldopentosa es de tipo:</h2>
+            <label><input type="radio" name="q35" value="a"> Fosfodiéster.</label>
+            <label><input type="radio" name="q35" value="b"> Amida.</label>
+            <label><input type="radio" name="q35" value="c"> Éter.</label>
+            <label><input type="radio" name="q35" value="d"> Beta-N-glucosídica.</label>
+            <div class="feedback" id="feedback-q35"></div>
+        </div>
+
+        <!-- Pregunta 36 -->
+        <div class="question">
+            <h2>36. El carácter parcial de doble enlace corresponde a:</h2>
+            <label><input type="radio" name="q36" value="a"> Unión tioéster.</label>
+            <label><input type="radio" name="q36" value="b"> Unión peptídica.</label>
+            <label><input type="radio" name="q36" value="c"> Unión fosfodiéster.</label>
+            <label><input type="radio" name="q36" value="d"> Unión glicosídica.</label>
+            <div class="feedback" id="feedback-q36"></div>
+        </div>
+
+        <!-- Pregunta 37 -->
+        <div class="question">
+            <h2>37. La acumulación de NADH2 en el paciente que abusa del alcohol:</h2>
+            <label><input type="radio" name="q37" value="a"> Disminuye la cetogénesis hepática.</label>
+            <label><input type="radio" name="q37" value="b"> Promueve la síntesis de ácidos grasos.</label>
+            <label><input type="radio" name="q37" value="c"> Aumenta la producción de lactato.</label>
+            <label><input type="radio" name="q37" value="d"> Induce la síntesis hepática de urea.</label>
+            <div class="feedback" id="feedback-q37"></div>
+        </div>
+
+        <!-- Pregunta 38 -->
+        <div class="question">
+            <h2>38. La medición de la fructosamina plasmática informa de la media de los valores de glucemia durante las últimas:</h2>
+            <label><input type="radio" name="q38" value="a"> 2-3 semanas.</label>
+            <label><input type="radio" name="q38" value="b"> 12 semanas.</label>
+            <label><input type="radio" name="q38" value="c"> 4-5 semanas.</label>
+            <label><input type="radio" name="q38" value="d"> 6-7 semanas.</label>
+            <div class="feedback" id="feedback-q38"></div>
+        </div>
+
+        <!-- Pregunta 39 -->
+        <div class="question">
+            <h2>39. ¿Cuál de las siguientes enzimas no corresponde al ciclo de Krebs?</h2>
+            <label><input type="radio" name="q39" value="a"> Piruvato deshidrogenasa.</label>
+            <label><input type="radio" name="q39" value="b"> Succinato deshidrogenasa.</label>
+            <label><input type="radio" name="q39" value="c"> Malato deshidrogenasa.</label>
+            <label><input type="radio" name="q39" value="d"> Citrato sintetasa.</label>
+            <div class="feedback" id="feedback-q39"></div>
+        </div>
+
+
+        <!-- Pregunta 40 -->
+        <div class="question">
+            <h2>40. La presencia de cilindros hialinos en un sedimento de orina indica:</h2>
+            <label><input type="radio" name="q40" value="a"> Proteinuria glomerular.</label>
+            <label><input type="radio" name="q40" value="b"> Daño renal por medicamentos.</label>
+            <label><input type="radio" name="q40" value="c"> Infección del parénquima renal.</label>
+            <label><input type="radio" name="q40" value="d"> Infección del tracto urinario bajo.</label>
+            <div class="feedback" id="feedback-q40"></div>
+        </div>
+
+        <!-- Pregunta 41 -->
+        <div class="question">
+            <h2>41. Un paciente con deficiencia de glucosa 6 fosfatasa presentará:</h2>
+            <label><input type="radio" name="q41" value="a"> Hiperglucemia; hiperuricemia; aumento de la glucogénesis.</label>
+            <label><input type="radio" name="q41" value="b"> Hipoglucemia; dislipidemia; hiperuricemia; acidosis láctica.</label>
+            <label><input type="radio" name="q41" value="c"> Aumento de la gluconeogénesis, de la lipogénesis y de la colesterolemia.</label>
+            <label><input type="radio" name="q41" value="d"> Hiperglucemia; lipólisis y cetogénesis aumentada; cetoacidosis.</label>
+            <div class="feedback" id="feedback-q41"></div>
+        </div>
+
+        <!-- Pregunta 42 -->
+        <div class="question">
+            <h2>42. Si se considera que un paciente que pesa 50 kilos tiene una natremia (concentración plasmática de sodio) de 125 mEq/l. Con respecto a una natremia normal de 142 mEq/l, el déficit total de sodio será:</h2>
+            <label><input type="radio" name="q42" value="a"> 828 mEq.</label>
+            <label><input type="radio" name="q42" value="b"> 780 mEq.</label>
+            <label><input type="radio" name="q42" value="c"> 288 mEq.</label>
+            <label><input type="radio" name="q42" value="d"> 510 mEq.</label>
+            <div class="feedback" id="feedback-q42"></div>
+        </div>
+
+        <!-- Pregunta 43 -->
+        <div class="question">
+            <h2>43. ¿Cuál de las siguientes enzimas requiere selenio como activador metálico?</h2>
+            <label><input type="radio" name="q43" value="a"> Glutatión peroxidasa.</label>
+            <label><input type="radio" name="q43" value="b"> Glutamato deshidrogenasa.</label>
+            <label><input type="radio" name="q43" value="c"> Lactato deshidrogenasa.</label>
+            <label><input type="radio" name="q43" value="d"> Fosfofructoquinasa 1.</label>
+            <div class="feedback" id="feedback-q43"></div>
+        </div>
+
+
+
+
+
+
+        <button type="button" onclick="checkAnswers()">Verificar</button>
+    </form>
+
+    <script>
+        const answers = {
+            q1: { answer: "a", text: "Respuesta correcta: A" },
+            q2: { answer: "d", text: "Respuesta correcta: D" },
+            q3: { answer: "d", text: "Respuesta correcta: D" },
+            q4: { answer: "c", text: "Respuesta correcta: C" },
+            q5: { answer: "a", text: "Respuesta correcta: A" },
+            q6: { answer: "d", text: "Respuesta correcta: D" },
+            q7: { answer: "a", text: "Respuesta correcta: A" },
+            q8: { answer: "a", text: "Respuesta correcta: A" },
+            q9: { answer: "b", text: "Respuesta correcta: B" },
+            q10: { answer: "a", text: "Respuesta correcta: A" },
+            q11: { answer: "c", text: "Respuesta correcta: C" },
+            q12: { answer: "c", text: "Respuesta correcta: C" },
+            q13: { answer: "b", text: "Respuesta correcta: B" },
+            q14: { answer: "c", text: "Respuesta correcta: C" },
+            q15: { answer: "d", text: "Respuesta correcta: D" },
+            q16: { answer: "c", text: "Respuesta correcta: C" },
+            q17: { answer: "a", text: "Respuesta correcta: A" },
+            q18: { answer: "d", text: "Respuesta correcta: D" },
+            q19: { answer: "c", text: "Respuesta correcta: C" },
+            q20: { answer: "c", text: "Respuesta correcta: C" },
+            q21: { answer: "a", text: "Respuesta correcta: A" },
+            q22: { answer: "a", text: "Respuesta correcta: A" },
+            q23: { answer: "d", text: "Respuesta correcta: D" },
+            q24: { answer: "c", text: "Respuesta correcta: C" },
+            q25: { answer: "c", text: "Respuesta correcta: C" },
+            q26: { answer: "a", text: "Respuesta correcta: A" },
+            q27: { answer: "d", text: "Respuesta correcta: D" },
+            q28: { answer: "d", text: "Respuesta correcta: D" },
+            q29: { answer: "a", text: "Respuesta correcta: A" },
+            q30: { answer: "d", text: "Respuesta correcta: D" },
+            q31: { answer: "c", text: "Respuesta correcta: C" },
+            q32: { answer: "b", text: "Respuesta correcta: B" },
+            q33: { answer: "a", text: "Respuesta correcta: A" },
+            q34: { answer: "b", text: "Respuesta correcta: B" },
+            q35: { answer: "a", text: "Respuesta correcta: A" },
+            q36: { answer: "b", text: "Respuesta correcta: B" },
+            q37: { answer: "c", text: "Respuesta correcta: C" },
+            q38: { answer: "a", text: "Respuesta correcta: A" },
+            q39: { answer: "a", text: "Respuesta correcta: A" },
+            q40: { answer: "a", text: "Respuesta correcta: A" },
+            q41: { answer: "b", text: "Respuesta correcta: B" },
+            q42: { answer: "d", text: "Respuesta correcta: D" },
+            q43: { answer: "a", text: "Respuesta correcta: A" }
+        };
+
+        function checkAnswers() {
+            const form = document.getElementById('quizForm');
+
+            for (const [question, data] of Object.entries(answers)) {
+                const selected = form.querySelector(`input[name="${question}"]:checked`);
+                const feedbackDiv = document.getElementById(`feedback-${question}`);
+                if (selected) {
+                    if (selected.value === data.answer) {
+                        feedbackDiv.innerHTML = "Correcto ✅";
+                        feedbackDiv.className = "feedback correct";
+                    } else {
+                        feedbackDiv.innerHTML = `Incorrecto ❌. La respuesta correcta es: ${data.text}`;
+                        feedbackDiv.className = "feedback incorrect";
+                    }
+                } else {
+                    feedbackDiv.innerHTML = "Por favor, selecciona una opción.";
+                    feedbackDiv.className = "feedback incorrect";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
