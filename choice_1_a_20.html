@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Bioquímica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            background: #ffffff;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .question h2 {
+            font-size: 1.2em;
+        }
+        .question label {
+            display: block;
+            margin: 5px 0;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 1em;
+            background: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Preguntas de Bioquímica</h1>
+    <form id="quizForm">
+        <!-- Pregunta 1 -->
+
+        <!-- Pregunta 1 -->
+        <div class="question">
+            <h2>1. La solución fisiológica es una solución isotónica para rehidratar por vía endovenosa que:</h2>
+            <label><input type="radio" name="q1" value="a"> Por su atoxicidad, carece de contraindicaciones.</label>
+            <label><input type="radio" name="q1" value="b"> Contiene cantidades equimolares de sodio, glucosa y cloruros.</label>
+            <label><input type="radio" name="q1" value="c"> Aporta 154 mEq/l de sodio y 154 mEq/l de cloruros.</label>
+            <label><input type="radio" name="q1" value="d"> Aporta principalmente agua y 9 g/dl de cloruro de sodio.</label>
+            <div class="feedback" id="feedback-q1"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="question">
+            <h2>2. ¿Cuál de los siguientes cambios metabólicos ocurre en el estado de saciedad?</h2>
+            <label><input type="radio" name="q2" value="a"> La fructosa 2-6 difosfato aumenta la actividad de la fosfofructoquinasa I.</label>
+            <label><input type="radio" name="q2" value="b"> El glucagón favorece la degradación del glucógeno hepático, vía AMP cíclico.</label>
+            <label><input type="radio" name="q2" value="c"> La insulina promueve la inhibición de la glucólisis y de la vía de las pentosas.</label>
+            <label><input type="radio" name="q2" value="d"> Aumenta la formación de oxalacetato por activación de la piruvato carboxilasa.</label>
+            <div class="feedback" id="feedback-q2"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="question">
+            <h2>3. El glucagón es una hormona polipeptídica que:</h2>
+            <label><input type="radio" name="q3" value="a"> Estimula la fosfofructoquinasa 1 y la glucógeno fosforilasa.</label>
+            <label><input type="radio" name="q3" value="b"> Inhibe la glucógeno sintetasa y la cetogénesis hepática.</label>
+            <label><input type="radio" name="q3" value="c"> Inhibe la fructosa 2-6 difosfatasa; estimula la piruvato quinasa.</label>
+            <label><input type="radio" name="q3" value="d"> Inhibe la fosfofructoquinasa 2; estimula la lipasa hormona sensible.</label>
+            <div class="feedback" id="feedback-q3"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="question">
+            <h2>4. La insulina es una hormona:</h2>
+            <label><input type="radio" name="q4" value="a"> Oligopeptídica; se sintetiza como preproinsulina, con un péptido conector.</label>
+            <label><input type="radio" name="q4" value="b"> Proteica; tiene dos cadenas polipeptídicas unidas por puentes disulfuro.</label>
+            <label><input type="radio" name="q4" value="c"> Proteica; tiene una sola cadena polipeptídica constituida por 84 aminoácidos.</label>
+            <label><input type="radio" name="q4" value="d"> Polipeptídica; tiene dos cadenas: A con 21 aminoácidos y B con 30 aminoácidos.</label>
+            <div class="feedback" id="feedback-q4"></div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="question">
+            <h2>5. ¿Cuáles son las principales acciones metabólicas de la insulina?</h2>
+            <label><input type="radio" name="q5" value="a"> Glucólisis; vía de las pentosas; lipogénesis; anabolismo proteico; síntesis de urea.</label>
+            <label><input type="radio" name="q5" value="b"> Glucólisis; gluconeogénesis; vía de las pentosas y anabolismo proteico.</label>
+            <label><input type="radio" name="q5" value="c"> Glucólisis; gluconeogénesis; vía de las pentosas; lipogénesis; anabolismo proteico.</label>
+            <label><input type="radio" name="q5" value="d"> Glucólisis; vía de las pentosas; síntesis de colesterol; transdesaminación oxidativa.</label>
+            <div class="feedback" id="feedback-q5"></div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="question">
+            <h2>6. ¿De qué manera repercutirá una dieta hipergrasa sobre el metabolismo de los glúcidos?</h2>
+            <label><input type="radio" name="q6" value="a"> Al aumentar la síntesis de ácidos grasos aumenta la formación de sustratos glucolíticos.</label>
+            <label><input type="radio" name="q6" value="b"> Al aumentar la síntesis de VLDL se activa la lipoproteinlipasa que aporta glicerol libre.</label>
+            <label><input type="radio" name="q6" value="c"> Al aumentar la formación de acetil-CoA se estimula la formación de glucógeno hepático.</label>
+            <label><input type="radio" name="q6" value="d"> Al aumentar la beta-oxidación, el exceso de acetil CoA estimulará la gluconeogénesis.</label>
+            <div class="feedback" id="feedback-q6"></div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="question">
+            <h2>7. ¿Cuál es el origen de los grupos amino que componen la urea?</h2>
+            <label><input type="radio" name="q7" value="a"> Decarboxilación oxidativa y ornitina.</label>
+            <label><input type="radio" name="q7" value="b"> Transaminación y arginina.</label>
+            <label><input type="radio" name="q7" value="c"> Transdesaminación y aspartato.</label>
+            <label><input type="radio" name="q7" value="d"> Desaminación oxidativa y glutamato.</label>
+            <div class="feedback" id="feedback-q7"></div>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="question">
+            <h2>8. ¿Qué función cumple la carnitín-aciltransferasa (CAT)?</h2>
+            <label><input type="radio" name="q8" value="a"> Facilitar la transformación de mevalonato en HMG-CoA microsomal.</label>
+            <label><input type="radio" name="q8" value="b"> Activación de los cuerpos cetónicos para posterior oxidación.</label>
+            <label><input type="radio" name="q8" value="c"> Activación de los ácidos grasos previo ingreso a mitocondria.</label>
+            <label><input type="radio" name="q8" value="d"> Facilitar el ingreso de los ácidos grasos activados a mitocondria.</label>
+            <div class="feedback" id="feedback-q8"></div>
+        </div>
+
+
+        <!-- Pregunta 9 -->
+        <div class="question">
+            <h2>9. ¿Cuál de las siguientes enzimas pertenece a la etapa de preparación del sustrato a oxidar de la glucólisis?</h2>
+            <label><input type="radio" name="q9" value="a"> Piruvato quinasa.</label>
+            <label><input type="radio" name="q9" value="b"> Fosfofructoquinasa 1.</label>
+            <label><input type="radio" name="q9" value="c"> Gliceraldehído 3 P deshidrogenasa.</label>
+            <label><input type="radio" name="q9" value="d"> Lactato deshidrogenasa.</label>
+            <div class="feedback" id="feedback-q9"></div>
+        </div>
+
+        <!-- Pregunta 10 -->
+        <div class="question">
+            <h2>10. ¿Cuál de los siguientes metabolitos es el principal andrógeno de origen suprarrenal?</h2>
+            <label><input type="radio" name="q10" value="a"> Dehidroepiandrosterona (DHEA).</label>
+            <label><input type="radio" name="q10" value="b"> Androsterona.</label>
+            <label><input type="radio" name="q10" value="c"> 5 alfa dihidrotestosterona (DHT).</label>
+            <label><input type="radio" name="q10" value="d"> Androstenodiona.</label>
+            <div class="feedback" id="feedback-q10"></div>
+        </div>
+
+        <!-- Pregunta 11 -->
+        <div class="question">
+            <h2>11. ¿Cuál de los siguientes criterios de laboratorio es sugestivo de diabetes mellitus?</h2>
+            <label><input type="radio" name="q11" value="a"> Poseer una hemoglobina glicosilada de 6% o más.</label>
+            <label><input type="radio" name="q11" value="b"> Dos o más glucemias en ayunas superiores a 126 mg/dl.</label>
+            <label><input type="radio" name="q11" value="c"> Glucemia post-prandial (120') superior a 200 mg/dl.</label>
+            <label><input type="radio" name="q11" value="d"> Dos o más glucemias en ayunas superiores a 200 mg/dl.</label>
+            <div class="feedback" id="feedback-q11"></div>
+        </div>
+
+
+
+        <!-- Pregunta 12 -->
+        <div class="question">
+            <h2>12. Un inhibidor competitivo de una determinada reacción catalizada por una enzima:</h2>
+            <label><input type="radio" name="q12" value="a"> Es estructuralmente similar al sustrato.</label>
+            <label><input type="radio" name="q12" value="b"> Se une a la enzima en un sitio diferente al sitio activo.</label>
+            <label><input type="radio" name="q12" value="c"> Su acción no es revertida por el aumento de sustrato.</label>
+            <label><input type="radio" name="q12" value="d"> Disminuye el Km de la enzima por el sustrato.</label>
+            <div class="feedback" id="feedback-q12"></div>
+        </div>
+
+        <!-- Pregunta 13 -->
+        <div class="question">
+            <h2>13. Las siguientes son funciones de la piridoxina, EXCEPTO:</h2>
+            <label><input type="radio" name="q13" value="a"> Transaminación.</label>
+            <label><input type="radio" name="q13" value="b"> Metabolismo del triptófano.</label>
+            <label><input type="radio" name="q13" value="c"> Descarboxilación de aminoácidos.</label>
+            <label><input type="radio" name="q13" value="d"> Transacetilación.</label>
+            <div class="feedback" id="feedback-q13"></div>
+        </div>
+
+        <!-- Pregunta 14 -->
+        <div class="question">
+            <h2>14. La carboxihemoglobina:</h2>
+            <label><input type="radio" name="q14" value="a"> Aumenta la disociación de oxígeno en acidosis e hipoxia.</label>
+            <label><input type="radio" name="q14" value="b"> Es la hemoglobina que ha fijado monóxido de carbono.</label>
+            <label><input type="radio" name="q14" value="c"> Sus niveles descienden drásticamente en los fumadores.</label>
+            <label><input type="radio" name="q14" value="d"> Transporta anhídrido carbónico de los tejidos a los pulmones.</label>
+            <div class="feedback" id="feedback-q14"></div>
+        </div>
+
+
+        <!-- Pregunta 15 -->
+        <div class="question">
+            <h2>15. La curva enzimática típica del infarto agudo de miocardio se caracteriza porque:</h2>
+            <label><input type="radio" name="q15" value="a"> Las troponinas aumentan más tardíamente que la CPK y la ASAT.</label>
+            <label><input type="radio" name="q15" value="b"> La CPK aumenta tardíamente luego de la ASAT.</label>
+            <label><input type="radio" name="q15" value="c"> La LDH persiste aumentada a la semana de haberse producido el IAM.</label>
+            <label><input type="radio" name="q15" value="d"> La ASAT aumenta posteriormente a la CPK y a la LDH.</label>
+            <div class="feedback" id="feedback-q15"></div>
+        </div>
+
+        <!-- Pregunta 16 -->
+        <div class="question">
+            <h2>16. La enterostatina es:</h2>
+            <label><input type="radio" name="q16" value="a"> Un pentapéptido señal para lípidos presente en el extremo amino terminal de la procolipasa.</label>
+            <label><input type="radio" name="q16" value="b"> Una hormona que se libera como consecuencia de la llegada del quimo ácido al intestino.</label>
+            <label><input type="radio" name="q16" value="c"> Una proteína intestinal que cataliza la hidrólisis de los triacilglicéridos de la dieta en carbono 3.</label>
+            <label><input type="radio" name="q16" value="d"> Un inhibidor competitivo de la HMG-CoA reductasa intestinal sólo activo a pH = 8.</label>
+            <div class="feedback" id="feedback-q16"></div>
+        </div>
+
+        <!-- Pregunta 17 -->
+        <div class="question">
+            <h2>17. Las proteínas de alto valor biológico son aquellas que:</h2>
+            <label><input type="radio" name="q17" value="a"> Tienen origen vegetal, en especial harinas y derivados.</label>
+            <label><input type="radio" name="q17" value="b"> Se degradan principalmente en el estómago por la pepsina.</label>
+            <label><input type="radio" name="q17" value="c"> Poseen la dotación completa de aminoácidos esenciales.</label>
+            <label><input type="radio" name="q17" value="d"> Tienen tanto origen animal (carnes) como vegetal.</label>
+            <div class="feedback" id="feedback-q17"></div>
+        </div>
+
+
+        <!-- Pregunta 18 -->
+        <div class="question">
+            <h2>18. ¿Cuál es el valor de la proteinemia normal?</h2>
+            <label><input type="radio" name="q18" value="a"> 0.5 a 1.2 mg/dL</label>
+            <label><input type="radio" name="q18" value="b"> 60 a 80 mg/dL</label>
+            <label><input type="radio" name="q18" value="c"> 6-8 mg/dL</label>
+            <label><input type="radio" name="q18" value="d"> 6-8 g%</label>
+            <div class="feedback" id="feedback-q18"></div>
+        </div>
+
+        <!-- Pregunta 19 -->
+        <div class="question">
+            <h2>19. El colágeno de tipo 1:</h2>
+            <label><input type="radio" name="q19" value="a"> Posee alto tenor de hidroxilisina y glúcidos.</label>
+            <label><input type="radio" name="q19" value="b"> Representa el 90% del colágeno del cuerpo.</label>
+            <label><input type="radio" name="q19" value="c"> Carece de glicina en su estructura primaria.</label>
+            <label><input type="radio" name="q19" value="d"> Se caracteriza por formar fibrillas finas.</label>
+            <div class="feedback" id="feedback-q19"></div>
+        </div>
+
+        <!-- Pregunta 20 -->
+        <div class="question">
+            <h2>20. La adenosina es:</h2>
+            <label><input type="radio" name="q20" value="a"> Un nucleótido.</label>
+            <label><input type="radio" name="q20" value="b"> Una base púrica; una base pirimídica.</label>
+            <label><input type="radio" name="q20" value="c"> Una base púrica.</label>
+            <label><input type="radio" name="q20" value="d"> Un nucleósido.</label>
+            <div class="feedback" id="feedback-q20"></div>
+        </div>
+        
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+        <button type="button" onclick="checkAnswers()">Verificar</button>
+    </form>
+
+    <script>
+        const answers = {
+            q1: { answer: "c", text: "Respuesta correcta: aporta 154 mEq/l de sodio y 154 mEq/l de cloruros" },
+            q2: { answer: "a", text: "Respuesta correcta: la fructosa 2-6 difosfato aumenta la actividad de la fosfofructoquinasa I" },
+            q3: { answer: "d", text: "Respuesta correcta: inhibe la fosfofructoquinasa 2; estimula la lipasa hormona sensible" },
+            q4: { answer: "b", text: "Respuesta correcta: proteica; tiene dos cadenas polipeptídicas unidas por puentes disulfuro" },
+            q5: { answer: "c", text: "Respuesta correcta: glucólisis; gluconeogénesis; vía de las pentosas; lipogénesis; anabolismo proteico" },
+            q6: { answer: "d", text: "Respuesta correcta: al aumentar la beta-oxidación, el exceso de acetil-CoA estimulará la gluconeogénesis" },
+            q7: { answer: "c", text: "Respuesta correcta: transdesaminación y aspartato" },
+            q8: { answer: "d", text: "Respuesta correcta: facilitar el ingreso de los ácidos grasos activados a mitocondria" },
+            q9: { answer: "b", text: "Respuesta correcta: fosfofructoquinasa 1" },
+            q10: { answer: "a", text: "Respuesta correcta: dehidroepiandrosterona (DHEA)" },
+            q11: { answer: "b", text: "Respuesta correcta: dos o más glucemias en ayunas superiores a 126 mg/dl" },
+            q12: { answer: "a", text: "Respuesta correcta: es estructuralmente similar al sustrato" },
+            q13: { answer: "d", text: "Respuesta correcta: transacetilación" },
+            q14: { answer: "b", text: "Respuesta correcta: es la hemoglobina que ha fijado monóxido de carbono" },
+            q15: { answer: "c", text: "Respuesta correcta: la LDH persiste aumentada a la semana de haberse producido el IAM" },
+            q16: { answer: "a", text: "Respuesta correcta: un pentapéptido señal para lípidos presente en el extremo amino terminal de la procolipasa" },
+            q17: { answer: "c", text: "Respuesta correcta: poseen la dotación completa de aminoácidos esenciales" },
+            q18: { answer: "d", text: "Respuesta correcta: 6-8 g%" },
+            q19: { answer: "b", text: "Respuesta correcta: representa el 90% del colágeno del cuerpo" },
+            q20: { answer: "d", text: "Respuesta correcta: un nucleósido" }
+        };
+
+        function checkAnswers() {
+            const form = document.getElementById('quizForm');
+
+            for (const [question, data] of Object.entries(answers)) {
+                const selected = form.querySelector(`input[name="${question}"]:checked`);
+                const feedbackDiv = document.getElementById(`feedback-${question}`);
+                if (selected) {
+                    if (selected.value === data.answer) {
+                        feedbackDiv.innerHTML = "Correcto ✅";
+                        feedbackDiv.className = "feedback correct";
+                    } else {
+                        feedbackDiv.innerHTML = `Incorrecto ❌. La respuesta correcta es: ${data.text}`;
+                        feedbackDiv.className = "feedback incorrect";
+                    }
+                } else {
+                    feedbackDiv.innerHTML = "Por favor, selecciona una opción.";
+                    feedbackDiv.className = "feedback incorrect";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
