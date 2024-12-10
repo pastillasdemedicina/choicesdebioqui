@@ -1,0 +1,694 @@
+<style>
+    /* Estilos generales */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f9;
+        color: #333;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .question {
+        background: #ffffff;
+        margin: 10px 0;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        position: relative;
+    }
+
+    .question h2 {
+        font-size: 1.2em;
+    }
+
+    .question label {
+        display: block;
+        margin: 5px 0;
+    }
+
+    .feedback {
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 0.9em;
+    }
+
+    .correct {
+        color: green;
+    }
+
+    .incorrect {
+        color: red;
+    }
+
+    /* Estilo para el botón flotante */
+    #verifyButton {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        font-size: 1em;
+        background: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    #verifyButton:hover {
+        background: #45a049;
+    }
+
+    /* Resultado final */
+    #resultDiv {
+        margin-top: 20px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+</style>
+
+<body>
+    <h1>Preguntas de Bioquímica</h1>
+    <form id="quizForm">
+        <!-- Preguntas: Reemplazar aquí con las preguntas que ya tienes -->
+        <!-- Ejemplo de preguntas (puedes añadir las demás de tu modelo anterior): -->
+        
+
+
+
+
+        <!-- Pregunta 1 -->
+        <div class="question">
+            <h2>1. La solución fisiológica es una solución isotónica para rehidratar por vía endovenosa que:</h2>
+            <label><input type="radio" name="q1" value="a"> Por su atoxicidad, carece de contraindicaciones.</label>
+            <label><input type="radio" name="q1" value="b"> Contiene cantidades equimolares de sodio, glucosa y cloruros.</label>
+            <label><input type="radio" name="q1" value="c"> Aporta 154 mEq/l de sodio y 154 mEq/l de cloruros.</label>
+            <label><input type="radio" name="q1" value="d"> Aporta principalmente agua y 9 g/dl de cloruro de sodio.</label>
+            <div class="feedback" id="feedback-q1"></div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="question">
+            <h2>2. ¿Cuál de los siguientes cambios metabólicos ocurre en el estado de saciedad?</h2>
+            <label><input type="radio" name="q2" value="a"> La fructosa 2-6 difosfato aumenta la actividad de la fosfofructoquinasa I.</label>
+            <label><input type="radio" name="q2" value="b"> El glucagón favorece la degradación del glucógeno hepático, vía AMP cíclico.</label>
+            <label><input type="radio" name="q2" value="c"> La insulina promueve la inhibición de la glucólisis y de la vía de las pentosas.</label>
+            <label><input type="radio" name="q2" value="d"> Aumenta la formación de oxalacetato por activación de la piruvato carboxilasa.</label>
+            <div class="feedback" id="feedback-q2"></div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="question">
+            <h2>3. El glucagón es una hormona polipeptídica que:</h2>
+            <label><input type="radio" name="q3" value="a"> Estimula la fosfofructoquinasa 1 y la glucógeno fosforilasa.</label>
+            <label><input type="radio" name="q3" value="b"> Inhibe la glucógeno sintetasa y la cetogénesis hepática.</label>
+            <label><input type="radio" name="q3" value="c"> Inhibe la fructosa 2-6 difosfatasa; estimula la piruvato quinasa.</label>
+            <label><input type="radio" name="q3" value="d"> Inhibe la fosfofructoquinasa 2; estimula la lipasa hormona sensible.</label>
+            <div class="feedback" id="feedback-q3"></div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="question">
+            <h2>4. La insulina es una hormona:</h2>
+            <label><input type="radio" name="q4" value="a"> Oligopeptídica; se sintetiza como preproinsulina, con un péptido conector.</label>
+            <label><input type="radio" name="q4" value="b"> Proteica; tiene dos cadenas polipeptídicas unidas por puentes disulfuro.</label>
+            <label><input type="radio" name="q4" value="c"> Proteica; tiene una sola cadena polipeptídica constituida por 84 aminoácidos.</label>
+            <label><input type="radio" name="q4" value="d"> Polipeptídica; tiene dos cadenas: A con 21 aminoácidos y B con 30 aminoácidos.</label>
+            <div class="feedback" id="feedback-q4"></div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="question">
+            <h2>5. ¿Cuáles son las principales acciones metabólicas de la insulina?</h2>
+            <label><input type="radio" name="q5" value="a"> Glucólisis; vía de las pentosas; lipogénesis; anabolismo proteico; síntesis de urea.</label>
+            <label><input type="radio" name="q5" value="b"> Glucólisis; gluconeogénesis; vía de las pentosas y anabolismo proteico.</label>
+            <label><input type="radio" name="q5" value="c"> Glucólisis; glucogenogenesis; vía de las pentosas; lipogénesis; anabolismo proteico.</label>
+            <label><input type="radio" name="q5" value="d"> Glucólisis; vía de las pentosas; síntesis de colesterol; transdesaminación oxidativa.</label>
+            <div class="feedback" id="feedback-q5"></div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="question">
+            <h2>6. ¿De qué manera repercutirá una dieta hipergrasa sobre el metabolismo de los glúcidos?</h2>
+            <label><input type="radio" name="q6" value="a"> Al aumentar la síntesis de ácidos grasos aumenta la formación de sustratos glucolíticos.</label>
+            <label><input type="radio" name="q6" value="b"> Al aumentar la síntesis de VLDL se activa la lipoproteinlipasa que aporta glicerol libre.</label>
+            <label><input type="radio" name="q6" value="c"> Al aumentar la formación de acetil-CoA se estimula la formación de glucógeno hepático.</label>
+            <label><input type="radio" name="q6" value="d"> Al aumentar la beta-oxidación, el exceso de acetil CoA estimulará la gluconeogénesis.</label>
+            <div class="feedback" id="feedback-q6"></div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="question">
+            <h2>7. ¿Cuál es el origen de los grupos amino que componen la urea?</h2>
+            <label><input type="radio" name="q7" value="a"> Decarboxilación oxidativa y ornitina.</label>
+            <label><input type="radio" name="q7" value="b"> Transaminación y arginina.</label>
+            <label><input type="radio" name="q7" value="c"> Transdesaminación y aspartato.</label>
+            <label><input type="radio" name="q7" value="d"> Desaminación oxidativa y glutamato.</label>
+            <div class="feedback" id="feedback-q7"></div>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="question">
+            <h2>8. ¿Qué función cumple la carnitín-aciltransferasa (CAT)?</h2>
+            <label><input type="radio" name="q8" value="a"> Facilitar la transformación de mevalonato en HMG-CoA microsomal.</label>
+            <label><input type="radio" name="q8" value="b"> Activación de los cuerpos cetónicos para posterior oxidación.</label>
+            <label><input type="radio" name="q8" value="c"> Activación de los ácidos grasos previo ingreso a mitocondria.</label>
+            <label><input type="radio" name="q8" value="d"> Facilitar el ingreso de los ácidos grasos activados a mitocondria.</label>
+            <div class="feedback" id="feedback-q8"></div>
+        </div>
+
+
+        <!-- Pregunta 9 -->
+        <div class="question">
+            <h2>9. ¿Cuál de las siguientes enzimas pertenece a la etapa de preparación del sustrato a oxidar de la glucólisis?</h2>
+            <label><input type="radio" name="q9" value="a"> Piruvato quinasa.</label>
+            <label><input type="radio" name="q9" value="b"> Fosfofructoquinasa 1.</label>
+            <label><input type="radio" name="q9" value="c"> Gliceraldehído 3 P deshidrogenasa.</label>
+            <label><input type="radio" name="q9" value="d"> Lactato deshidrogenasa.</label>
+            <div class="feedback" id="feedback-q9"></div>
+        </div>
+
+        <!-- Pregunta 10 -->
+        <div class="question">
+            <h2>10. ¿Cuál de los siguientes metabolitos es el principal andrógeno de origen suprarrenal?</h2>
+            <label><input type="radio" name="q10" value="a"> Dehidroepiandrosterona (DHEA).</label>
+            <label><input type="radio" name="q10" value="b"> Androsterona.</label>
+            <label><input type="radio" name="q10" value="c"> 5 alfa dihidrotestosterona (DHT).</label>
+            <label><input type="radio" name="q10" value="d"> Androstenodiona.</label>
+            <div class="feedback" id="feedback-q10"></div>
+        </div>
+
+        <!-- Pregunta 11 -->
+        <div class="question">
+            <h2>11. ¿Cuál de los siguientes criterios de laboratorio es sugestivo de diabetes mellitus?</h2>
+            <label><input type="radio" name="q11" value="a"> Poseer una hemoglobina glicosilada de 6% o más.</label>
+            <label><input type="radio" name="q11" value="b"> Dos o más glucemias en ayunas superiores a 126 mg/dl.</label>
+            <label><input type="radio" name="q11" value="c"> Glucemia post-prandial (120') superior a 200 mg/dl.</label>
+            <label><input type="radio" name="q11" value="d"> Dos o más glucemias en ayunas superiores a 200 mg/dl.</label>
+            <div class="feedback" id="feedback-q11"></div>
+        </div>
+
+
+
+        <!-- Pregunta 12 -->
+        <div class="question">
+            <h2>12. Un inhibidor competitivo de una determinada reacción catalizada por una enzima:</h2>
+            <label><input type="radio" name="q12" value="a"> Es estructuralmente similar al sustrato.</label>
+            <label><input type="radio" name="q12" value="b"> Se une a la enzima en un sitio diferente al sitio activo.</label>
+            <label><input type="radio" name="q12" value="c"> Su acción no es revertida por el aumento de sustrato.</label>
+            <label><input type="radio" name="q12" value="d"> Disminuye el Km de la enzima por el sustrato.</label>
+            <div class="feedback" id="feedback-q12"></div>
+        </div>
+
+        <!-- Pregunta 13 -->
+        <div class="question">
+            <h2>13. Las siguientes son funciones de la piridoxina, EXCEPTO:</h2>
+            <label><input type="radio" name="q13" value="a"> Transaminación.</label>
+            <label><input type="radio" name="q13" value="b"> Metabolismo del triptófano.</label>
+            <label><input type="radio" name="q13" value="c"> Descarboxilación de aminoácidos.</label>
+            <label><input type="radio" name="q13" value="d"> Transacetilación.</label>
+            <div class="feedback" id="feedback-q13"></div>
+        </div>
+
+        <!-- Pregunta 14 -->
+        <div class="question">
+            <h2>14. La carboxihemoglobina:</h2>
+            <label><input type="radio" name="q14" value="a"> Aumenta la disociación de oxígeno en acidosis e hipoxia.</label>
+            <label><input type="radio" name="q14" value="b"> Es la hemoglobina que ha fijado monóxido de carbono.</label>
+            <label><input type="radio" name="q14" value="c"> Sus niveles descienden drásticamente en los fumadores.</label>
+            <label><input type="radio" name="q14" value="d"> Transporta anhídrido carbónico de los tejidos a los pulmones.</label>
+            <div class="feedback" id="feedback-q14"></div>
+        </div>
+
+
+        <!-- Pregunta 15 -->
+        <div class="question">
+            <h2>15. La curva enzimática típica del infarto agudo de miocardio se caracteriza porque:</h2>
+            <label><input type="radio" name="q15" value="a"> Las troponinas aumentan más tardíamente que la CPK y la ASAT.</label>
+            <label><input type="radio" name="q15" value="b"> La CPK aumenta tardíamente luego de la ASAT.</label>
+            <label><input type="radio" name="q15" value="c"> La LDH persiste aumentada a la semana de haberse producido el IAM.</label>
+            <label><input type="radio" name="q15" value="d"> La ASAT aumenta posteriormente a la CPK y a la LDH.</label>
+            <div class="feedback" id="feedback-q15"></div>
+        </div>
+
+        <!-- Pregunta 16 -->
+        <div class="question">
+            <h2>16. La enterostatina es:</h2>
+            <label><input type="radio" name="q16" value="a"> Un pentapéptido señal para lípidos presente en el extremo amino terminal de la procolipasa.</label>
+            <label><input type="radio" name="q16" value="b"> Una hormona que se libera como consecuencia de la llegada del quimo ácido al intestino.</label>
+            <label><input type="radio" name="q16" value="c"> Una proteína intestinal que cataliza la hidrólisis de los triacilglicéridos de la dieta en carbono 3.</label>
+            <label><input type="radio" name="q16" value="d"> Un inhibidor competitivo de la HMG-CoA reductasa intestinal sólo activo a pH = 8.</label>
+            <div class="feedback" id="feedback-q16"></div>
+        </div>
+
+        <!-- Pregunta 17 -->
+        <div class="question">
+            <h2>17. Las proteínas de alto valor biológico son aquellas que:</h2>
+            <label><input type="radio" name="q17" value="a"> Tienen origen vegetal, en especial harinas y derivados.</label>
+            <label><input type="radio" name="q17" value="b"> Se degradan principalmente en el estómago por la pepsina.</label>
+            <label><input type="radio" name="q17" value="c"> Poseen la dotación completa de aminoácidos esenciales.</label>
+            <label><input type="radio" name="q17" value="d"> Tienen tanto origen animal (carnes) como vegetal.</label>
+            <div class="feedback" id="feedback-q17"></div>
+        </div>
+
+
+        <!-- Pregunta 18 -->
+        <div class="question">
+            <h2>18. ¿Cuál es el valor de la proteinemia normal?</h2>
+            <label><input type="radio" name="q18" value="a"> 0.5 a 1.2 mg/dL</label>
+            <label><input type="radio" name="q18" value="b"> 60 a 80 mg/dL</label>
+            <label><input type="radio" name="q18" value="c"> 6-8 mg/dL</label>
+            <label><input type="radio" name="q18" value="d"> 6-8 g%</label>
+            <div class="feedback" id="feedback-q18"></div>
+        </div>
+
+        <!-- Pregunta 19 -->
+        <div class="question">
+            <h2>19. El colágeno de tipo 1:</h2>
+            <label><input type="radio" name="q19" value="a"> Posee alto tenor de hidroxilisina y glúcidos.</label>
+            <label><input type="radio" name="q19" value="b"> Representa el 90% del colágeno del cuerpo.</label>
+            <label><input type="radio" name="q19" value="c"> Carece de glicina en su estructura primaria.</label>
+            <label><input type="radio" name="q19" value="d"> Se caracteriza por formar fibrillas finas.</label>
+            <div class="feedback" id="feedback-q19"></div>
+        </div>
+
+        <!-- Pregunta 20 -->
+        <div class="question">
+            <h2>20. La adenosina es:</h2>
+            <label><input type="radio" name="q20" value="a"> Un nucleótido.</label>
+            <label><input type="radio" name="q20" value="b"> Una base púrica; una base pirimídica.</label>
+            <label><input type="radio" name="q20" value="c"> Una base púrica.</label>
+            <label><input type="radio" name="q20" value="d"> Un nucleósido.</label>
+            <div class="feedback" id="feedback-q20"></div>
+        </div>
+
+
+        <!-- Pregunta 21 -->
+        <div class="question">
+            <h2>21. El efecto Bohr:</h2>
+            <label><input type="radio" name="q21" value="a"> Es el efecto que produce el aumento de la presión de CO₂ y la disminución del pH en la disminución de la afinidad de la hemoglobina por el oxígeno.</label>
+            <label><input type="radio" name="q21" value="b"> Es el efecto que produce el aumento de la presión de CO₂ y la disminución de la concentración de protones en la disminución de la afinidad de la hemoglobina por el oxígeno.</label>
+            <label><input type="radio" name="q21" value="c"> Es el efecto del monóxido de carbono al unirse a la sexta valencia del hierro del hemo.</label>
+            <label><input type="radio" name="q21" value="d"> Es el efecto que produce la disminución de la presión de CO₂ y del pH en la disminución de la afinidad de la hemoglobina por el oxígeno.</label>
+            <div class="feedback" id="feedback-q21"></div>
+        </div>
+
+        <!-- Pregunta 22 -->
+        <div class="question">
+            <h2>22. Una de las causas de ictericia puede obedecer a la presencia de cálculos de colesterol en la vía biliar. ¿Qué datos complementarios de laboratorio espera encontrar en el paciente?</h2>
+            <label><input type="radio" name="q22" value="a"> Hiperbilirrubinemia no conjugada; hipercolia sin coluria.</label>
+            <label><input type="radio" name="q22" value="b"> Hiperbilirrubinemia no conjugada; acolia sin coluria.</label>
+            <label><input type="radio" name="q22" value="c"> Hiperbilirrubinemia conjugada; hipercolia; coluria.</label>
+            <label><input type="radio" name="q22" value="d"> Hiperbilirrubinemia conjugada; acolia; coluria.</label>
+            <div class="feedback" id="feedback-q22"></div>
+        </div>
+
+        <!-- Pregunta 23 -->
+        <div class="question">
+            <h2>23. Una Unidad Internacional de actividad enzimática es la cantidad de enzima capaz de transformar:</h2>
+            <label><input type="radio" name="q23" value="a"> Un milimol de sustrato en un segundo.</label>
+            <label><input type="radio" name="q23" value="b"> Un mol de sustrato en un minuto.</label>
+            <label><input type="radio" name="q23" value="c"> Un micromol de sustrato en un segundo.</label>
+            <label><input type="radio" name="q23" value="d"> Un micromol de sustrato en un minuto.</label>
+            <div class="feedback" id="feedback-q23"></div>
+        </div>
+
+        <!-- Pregunta 24 -->
+        <div class="question">
+            <h2>24. En el ayuno:</h2>
+            <label><input type="radio" name="q24" value="a"> La fructosa 2-6 di P induce a la piruvato quinasa.</label>
+            <label><input type="radio" name="q24" value="b"> Aumenta la actividad de la glutamato deshidrogenasa.</label>
+            <label><input type="radio" name="q24" value="c"> La lipoproteinlipasa asimila ácidos grasos en el adipocito.</label>
+            <label><input type="radio" name="q24" value="d"> Aumenta la actividad de la citrato liasa hepática.</label>
+            <div class="feedback" id="feedback-q24"></div>
+        </div>
+
+        <!-- Pregunta 25 -->
+        <div class="question">
+            <h2>25. La cetogénesis es una vía metabólica que ocurre en:</h2>
+            <label><input type="radio" name="q25" value="a"> Aquellas situaciones en las que haya hiperglucagonemia.</label>
+            <label><input type="radio" name="q25" value="b"> El citoplasma del hepatocito en situación de ayuno y estrés.</label>
+            <label><input type="radio" name="q25" value="c"> La mitocondria del hepatocito en situación de saciedad.</label>
+            <label><input type="radio" name="q25" value="d"> La mitocondria del músculo esquelético; cardíaco y riñón.</label>
+            <div class="feedback" id="feedback-q25"></div>
+        </div>
+
+        <!-- Pregunta 26 -->
+        <div class="question">
+            <h2>26. La elastasa es una:</h2>
+            <label><input type="radio" name="q26" value="a"> Exopeptidasa; pH óptimo 8; es una aspartil enzima que hidroliza aminoácidos ácidos.</label>
+            <label><input type="radio" name="q26" value="b"> Endopeptidasa; pH óptimo 2 a 4; actúa en especial sobre aminoácidos aromáticos.</label>
+            <label><input type="radio" name="q26" value="c"> Exopeptidasa; pH óptimo 2 a 4; es una metaloenzima que posee cobre en su sitio activo.</label>
+            <label><input type="radio" name="q26" value="d"> Endopeptidasa; pH óptimo 8; actúa en especial sobre aminoácidos pequeños.</label>
+            <div class="feedback" id="feedback-q26"></div>
+        </div>
+
+
+        <!-- Pregunta 27 -->
+        <div class="question">
+            <h2>27. ¿Cuáles de las siguientes enzimas están inducidas por la insulina en saciedad?</h2>
+            <label><input type="radio" name="q27" value="a"> Piruvato quinasa; fructosa 6 fosfatasa; 6 P gluconato deshidrogenasa.</label>
+            <label><input type="radio" name="q27" value="b"> Piruvato quinasa; glucosa 6 fosfatasa; fosfofructoquinasa 1.</label>
+            <label><input type="radio" name="q27" value="c"> Glucoquinasa; PEP carboxiquinasa; lipasa hormonosensible.</label>
+            <label><input type="radio" name="q27" value="d"> Glucoquinasa; glucosa 6 P deshidrogenasa; lipoproteinlipasa.</label>
+            <div class="feedback" id="feedback-q27"></div>
+        </div>
+
+        <!-- Pregunta 28 -->
+        <div class="question">
+            <h2>28. El complejo II de la cadena de transporte de electrones corresponde a:</h2>
+            <label><input type="radio" name="q28" value="a"> Coenzima Q o ubiquinona.</label>
+            <label><input type="radio" name="q28" value="b"> Complejo citocromo b, c1, c.</label>
+            <label><input type="radio" name="q28" value="c"> Succinato deshidrogenasa.</label>
+            <label><input type="radio" name="q28" value="d"> ATP sintetasa.</label>
+            <div class="feedback" id="feedback-q28"></div>
+        </div>
+
+        <!-- Pregunta 29 -->
+        <div class="question">
+            <h2>29. Alicia tiene 63 años, es obesa e inicia un régimen alimentario para adelgazar a base de una restricción de la ingesta de glúcidos y del empleo de un diurético. ¿Qué alteraciones metabólicas sufrirá en su organismo?</h2>
+            <label><input type="radio" name="q29" value="a"> Deshidratación; aumento de la glucólisis y de la síntesis de novo de purinas.</label>
+            <label><input type="radio" name="q29" value="b"> Deshidratación; aumento de la beta oxidación, de la uremia y de la cetogénesis.</label>
+            <label><input type="radio" name="q29" value="c"> Deshidratación; aumento de la gluconeogénesis hepática y de la cetogénesis.</label>
+            <label><input type="radio" name="q29" value="d"> Aumento de la gluconeogénesis; vía de las pentosas y del anabolismo proteico.</label>
+            <div class="feedback" id="feedback-q29"></div>
+        </div>
+        
+        <!-- Pregunta 30 -->
+        <div class="question">
+            <h2>30. En una situación de saciedad, aumenta la actividad de la enzima acetil CoA carboxilasa. ¿Cuál es su principal modulador alostérico positivo y cuál es su origen?</h2>
+            <label><input type="radio" name="q30" value="a"> Malonil CoA; síntesis de ácidos grasos.</label>
+            <label><input type="radio" name="q30" value="b"> Citrato; ciclo de Krebs.</label>
+            <label><input type="radio" name="q30" value="c"> Acetil CoA; beta-oxidación.</label>
+            <label><input type="radio" name="q30" value="d"> Alanina; transaminación.</label>
+            <div class="feedback" id="feedback-q30"></div>
+        </div>
+
+        <!-- Pregunta 31 -->
+        <div class="question">
+            <h2>31. En la deficiencia de glucosa 6 fosfatasa (Enfermedad de Von Gierke), el paciente presenta:</h2>
+            <label><input type="radio" name="q31" value="a"> Hipoglucemia; hiperpotasemia; hiponatremia; alcalosis metabólica.</label>
+            <label><input type="radio" name="q31" value="b"> Hiperglucemia; aumento de la urea en sangre; hipercalcemia.</label>
+            <label><input type="radio" name="q31" value="c"> Hipoglucemia; dislipidemia; hiperuricemia; acidosis láctica.</label>
+            <label><input type="radio" name="q31" value="d"> Hiperglucemia; poliuria; polidipsia; poliéfagia; pérdida de peso.</label>
+            <div class="feedback" id="feedback-q31"></div>
+        </div>
+
+        <!-- Pregunta 32 -->
+        <div class="question">
+            <h2>32. El envejecimiento es un proceso fisiológico que se relaciona con la acumulación de radicales libres. ¿Qué vitamina participa principalmente en la eliminación de radicales libres y cuál es su estructura química?</h2>
+            <label><input type="radio" name="q32" value="a"> Vitamina E; anillo cromano unido a cadena isoprenoide.</label>
+            <label><input type="radio" name="q32" value="b"> Vitamina D; anillo secosteroide.</label>
+            <label><input type="radio" name="q32" value="c"> Vitamina K; núcleo 2-metil naftoquinona con cadena lipofílica.</label>
+            <label><input type="radio" name="q32" value="d"> Vitamina A; anillo beta-ionona unido a cadena isoprenoide.</label>
+            <div class="feedback" id="feedback-q32"></div>
+        </div>
+
+        <!-- Pregunta 33 -->
+        <div class="question">
+            <h2>33. El número atómico (Z) se refiere a:</h2>
+            <label><input type="radio" name="q33" value="a"> Número de neutrones que posee un átomo en el núcleo.</label>
+            <label><input type="radio" name="q33" value="b"> Número de protones que posee un átomo en el núcleo.</label>
+            <label><input type="radio" name="q33" value="c"> Número de protones más electrones que posee un átomo.</label>
+            <label><input type="radio" name="q33" value="d"> Número de protones más neutrones que hay en el núcleo.</label>
+            <div class="feedback" id="feedback-q33"></div>
+        </div>
+
+        <!-- Pregunta 34 -->
+        <div class="question">
+            <h2>34. ¿Cuál de las siguientes opciones con respecto a la tiamina es CORRECTA?</h2>
+            <label><input type="radio" name="q34" value="a"> Se destruye principalmente a temperaturas bajas, especialmente por debajo de 10°C.</label>
+            <label><input type="radio" name="q34" value="b"> La tiamina se destruye con rapidez si el pH es inferior a 8.</label>
+            <label><input type="radio" name="q34" value="c"> No se pierde en el agua de cocción de los alimentos.</label>
+            <label><input type="radio" name="q34" value="d"> Participa como coenzima en procesos de descarboxilación oxidativa.</label>
+            <div class="feedback" id="feedback-q34"></div>
+        </div>
+
+        <!-- Pregunta 35 -->
+        <div class="question">
+            <h2>35. ¿Cuál de las siguientes afirmaciones sobre la beta-oxidación es CORRECTA?</h2>
+            <label><input type="radio" name="q35" value="a"> La beta-oxidación posee dos deshidrogenasas que requieren NAD+ como coenzima.</label>
+            <label><input type="radio" name="q35" value="b"> La carnitina es un aminoácido esencial que permite la traslocación de ácidos grasos.</label>
+            <label><input type="radio" name="q35" value="c"> Por cada vuelta al ciclo de degradación de palmitato se ganan 35 moléculas de ATP.</label>
+            <label><input type="radio" name="q35" value="d"> La activación de los ácidos grasos es catalizada por una tioferasa mitocondrial.</label>
+            <div class="feedback" id="feedback-q35"></div>
+        </div>
+
+
+
+
+        <!-- Pregunta 36 -->
+        <div class="question">
+            <h2>36. El quilomicrón maduro es la lipoproteína que:</h2>
+            <label><input type="radio" name="q36" value="a"> En su paso por la sangre recibió apo C y E de las HDL.</label>
+            <label><input type="radio" name="q36" value="b"> Interactuó con las VLDL para la obtención de apo B 100.</label>
+            <label><input type="radio" name="q36" value="c"> Sufrió la acción enzimática de la lipoproteinlipasa.</label>
+            <label><input type="radio" name="q36" value="d"> Recibió colesterol esterificado por la LCAT plasmática.</label>
+            <div class="feedback" id="feedback-q36"></div>
+        </div>
+
+        <!-- Pregunta 37 -->
+        <div class="question">
+            <h2>37. La unión química que se establece entre dos nucleótidos del ADN es de tipo:</h2>
+            <label><input type="radio" name="q37" value="a"> Fosfodiéster.</label>
+            <label><input type="radio" name="q37" value="b"> Amida.</label>
+            <label><input type="radio" name="q37" value="c"> Éster fosfórico.</label>
+            <label><input type="radio" name="q37" value="d"> Anhídrido fosfórico.</label>
+            <div class="feedback" id="feedback-q37"></div>
+        </div>
+
+        <!-- Pregunta 38 -->
+        <div class="question">
+            <h2>38. El almidón se diferencia estructuralmente de la celulosa en que ésta es:</h2>
+            <label><input type="radio" name="q38" value="a"> Un heteropolisacárido lineal constituido por glucurónico y glucosamina.</label>
+            <label><input type="radio" name="q38" value="b"> Un homopolisacárido lineal de beta-D-glucopiranosas en uniones beta 1,4.</label>
+            <label><input type="radio" name="q38" value="c"> Un homopolisacárido lineal de reserva de beta-D-glucopiranosas.</label>
+            <label><input type="radio" name="q38" value="d"> Un homopolisacárido estructural ramificado de alfa-D-glucopiranosas.</label>
+            <div class="feedback" id="feedback-q38"></div>
+        </div>
+
+        <!-- Pregunta 39 -->
+        <div class="question">
+            <h2>39. En el estado metabólico de ayuno:</h2>
+            <label><input type="radio" name="q39" value="a"> Se activa la enzima glucosa 6 P deshidrogenasa.</label>
+            <label><input type="radio" name="q39" value="b"> Se activa la lipogénesis y la cetólisis muscular.</label>
+            <label><input type="radio" name="q39" value="c"> Disminuye la formación de fructosa 2-6 difosfato.</label>
+            <label><input type="radio" name="q39" value="d"> Aumenta la actividad de la acetil CoA carboxilasa.</label>
+            <div class="feedback" id="feedback-q39"></div>
+        </div>
+
+        <!-- Pregunta 40 -->
+        <div class="question">
+            <h2>40. La hidroxilación de hormonas suprarrenales es un proceso principalmente:</h2>
+            <label><input type="radio" name="q40" value="a"> Mitocondrial; requiere NADH₂ y FADH₂, oxígeno y agua.</label>
+            <label><input type="radio" name="q40" value="b"> Microsomal; requiere citocromo p450, NADPH y oxígeno.</label>
+            <label><input type="radio" name="q40" value="c"> Mitocondrial; requiere citocromo p450, NADPH₂ y oxígeno.</label>
+            <label><input type="radio" name="q40" value="d"> Microsomal; requiere NADH₂ y FADH₂, oxígeno y agua.</label>
+            <div class="feedback" id="feedback-q40"></div>
+        </div>
+
+        <!-- Pregunta 41 -->
+        <div class="question">
+            <h2>41. Si se considera que un paciente pesa 70 kilos y tiene una natremia (concentración plasmática de sodio) de 128 mEq/l, con respecto a una natremia normal de 142 mEq/l, el déficit total de sodio será de:</h2>
+            <label><input type="radio" name="q41" value="a"> 696 mEq.</label>
+            <label><input type="radio" name="q41" value="b"> 588 mEq.</label>
+            <label><input type="radio" name="q41" value="c"> 828 mEq.</label>
+            <label><input type="radio" name="q41" value="d"> 424 mEq.</label>
+            <div class="feedback" id="feedback-q41"></div>
+        </div>
+
+
+        <!-- Pregunta 42 -->
+        <div class="question">
+            <h2>42. Una solución de dextrosa al 5% aporta:</h2>
+            <label><input type="radio" name="q42" value="a"> 5 gramos de D-glucosa por 100 ml de solución.</label>
+            <label><input type="radio" name="q42" value="b"> 5 miligramos de D-glucosa por 100 ml de solución.</label>
+            <label><input type="radio" name="q42" value="c"> 5 gramos de D-glucosa por 100 mg de solución.</label>
+            <label><input type="radio" name="q42" value="d"> D-glucosa y cloruro de sodio para hidratación intravenosa.</label>
+            <div class="feedback" id="feedback-q42"></div>
+        </div>
+
+        <!-- Pregunta 43 -->
+        <div class="question">
+            <h2>43. La estercobilina es un urobilinóide fecal que proviene del metabolismo de:</h2>
+            <label><input type="radio" name="q43" value="a"> Proteínas de la dieta.</label>
+            <label><input type="radio" name="q43" value="b"> Sales biliares.</label>
+            <label><input type="radio" name="q43" value="c"> Colesterol.</label>
+            <label><input type="radio" name="q43" value="d"> Bilirrubina.</label>
+            <div class="feedback" id="feedback-q43"></div>
+        </div>
+
+        <!-- Pregunta 44 -->
+        <div class="question">
+            <h2>44. ¿Cuál de los siguientes parámetros de laboratorio marca con mayor precisión el control metabólico de la diabetes mellitus?</h2>
+            <label><input type="radio" name="q44" value="a"> Glucemias preprandiales.</label>
+            <label><input type="radio" name="q44" value="b"> Ectonuria; glucosuria.</label>
+            <label><input type="radio" name="q44" value="c"> Microalbuminuria /24 horas.</label>
+            <label><input type="radio" name="q44" value="d"> Hemoglobina glicosilada.</label>
+            <div class="feedback" id="feedback-q44"></div>
+        </div>
+
+        <!-- Pregunta 45 -->
+        <div class="question">
+            <h2>45. Se considera punto isoeléctrico (pI) de un aminoácido a:</h2>
+            <label><input type="radio" name="q45" value="a"> El pH donde toda la molécula tiene carga neutra.</label>
+            <label><input type="radio" name="q45" value="b"> El pH donde los grupos N y C tienen carga neutra.</label>
+            <label><input type="radio" name="q45" value="c"> El pH donde los grupos N y C están ionizados.</label>
+            <label><input type="radio" name="q45" value="d"> El pH donde toda la molécula se haya ionizada.</label>
+            <div class="feedback" id="feedback-q45"></div>
+        </div>
+
+        <!-- Pregunta 46 -->
+        <div class="question">
+            <h2>46. La lactosa es un disacárido formado por:</h2>
+            <label><input type="radio" name="q46" value="a"> Alfa-D-glucopiranosa y alfa-D-glucopiranosa en unión alfa 1-4.</label>
+            <label><input type="radio" name="q46" value="b"> Alfa-D-glucopiranosa y beta-D-fructofuranosa en unión alfa 1-2.</label>
+            <label><input type="radio" name="q46" value="c"> Beta-D-galactopiranosa y alfa-D-glucopiranosa en unión beta 1-4.</label>
+            <label><input type="radio" name="q46" value="d"> Beta-D-galactopiranosa y beta-D-fructofuranosa en unión beta 2-1.</label>
+            <div class="feedback" id="feedback-q46"></div>
+        </div>
+
+        <!-- Pregunta 47 -->
+        <div class="question">
+            <h2>47. ¿Cuál de las siguientes afirmaciones es CORRECTA con respecto al glucagón?</h2>
+            <label><input type="radio" name="q47" value="a"> Favorece la fosforólisis del glucógeno solamente a nivel del tejido hepático.</label>
+            <label><input type="radio" name="q47" value="b"> Aumenta la capacidad de degradación del glucógeno del tejido muscular.</label>
+            <label><input type="radio" name="q47" value="c"> Tiene efectos opuestos a los de la adrenalina sobre el metabolismo del glucógeno.</label>
+            <label><input type="radio" name="q47" value="d"> Junto con la insulina tiene efectos similares sobre el metabolismo del glucógeno.</label>
+            <div class="feedback" id="feedback-q47"></div>
+        </div>
+
+
+
+        <!-- Pregunta 48 -->
+        <div class="question">
+            <h2>48. El ácido linoleico:</h2>
+            <label><input type="radio" name="q48" value="a"> Su notación es 18: 3 Δ 9, 12,15;</label>
+            <label><input type="radio" name="q48" value="b"> Pertenece a la serie ω3;</label>
+            <label><input type="radio" name="q48" value="c"> Es precursor del ácido araquidónico;</label>
+            <label><input type="radio" name="q48" value="d"> Es un ácido graso saturado de 18 C.</label>
+            <div class="feedback" id="feedback-q48"></div>
+        </div>
+
+        <!-- Pregunta 49 -->
+        <div class="question">
+            <h2>49. Un aminoácido polar con carga negativa a pH = 7 es sometido a un pH=1. El mismo tendrá una carga eléctrica neta igual a:</h2>
+            <label><input type="radio" name="q49" value="a"> -1;</label>
+            <label><input type="radio" name="q49" value="b"> 0;</label>
+            <label><input type="radio" name="q49" value="c"> +1;</label>
+            <label><input type="radio" name="q49" value="d"> -2;</label>
+            <div class="feedback" id="feedback-q49"></div>
+        </div>
+
+        <!-- Pregunta 50 -->
+        <div class="question">
+            <h2>50. El síndrome de Lesch-Nyhan se caracteriza por:</h2>
+            <label><input type="radio" name="q50" value="a"> Trastorno hepático en la síntesis de novo de las bases pirimídicas;</label>
+            <label><input type="radio" name="q50" value="b"> Trastorno hereditario de reparación del ADN con cáncer de piel;</label>
+            <label><input type="radio" name="q50" value="c"> Déficit de la enzima hipoxantina-guanina-fosforribosil transferasa;</label>
+            <label><input type="radio" name="q50" value="d"> Cuadro de hipercalcemia secundario a hiperparatiroidismo.</label>
+            <div class="feedback" id="feedback-q50"></div>
+        </div>
+
+
+
+        <!-- Añade todas las preguntas aquí como en el ejemplo -->
+    </form>
+
+    <!-- Botón flotante -->
+    <button id="verifyButton" onclick="checkAnswers()">Verificar</button>
+
+    <script>
+        const answers = {
+            q1: { answer: "c", text: "Respuesta correcta: aporta 154 mEq/l de sodio y 154 mEq/l de cloruros" },
+            q2: { answer: "a", text: "Respuesta correcta: la fructosa 2-6 difosfato aumenta la actividad de la fosfofructoquinasa I" },
+            q3: { answer: "d", text: "Respuesta correcta: inhibe la fosfofructoquinasa 2; estimula la lipasa hormona sensible" },
+            q4: { answer: "b", text: "Respuesta correcta: proteica; tiene dos cadenas polipeptídicas unidas por puentes disulfuro" },
+            q5: { answer: "c", text: "Respuesta correcta: glucólisis; gluconeogénesis; vía de las pentosas; lipogénesis; anabolismo proteico" },
+            q6: { answer: "d", text: "Respuesta correcta: al aumentar la beta-oxidación, el exceso de acetil-CoA estimulará la gluconeogénesis" },
+            q7: { answer: "c", text: "Respuesta correcta: transdesaminación y aspartato" },
+            q8: { answer: "d", text: "Respuesta correcta: facilitar el ingreso de los ácidos grasos activados a mitocondria" },
+            q9: { answer: "b", text: "Respuesta correcta: fosfofructoquinasa 1" },
+            q10: { answer: "a", text: "Respuesta correcta: dehidroepiandrosterona (DHEA)" },
+            q11: { answer: "b", text: "Respuesta correcta: dos o más glucemias en ayunas superiores a 126 mg/dl" },
+            q12: { answer: "a", text: "Respuesta correcta: es estructuralmente similar al sustrato" },
+            q13: { answer: "d", text: "Respuesta correcta: transacetilación" },
+            q14: { answer: "b", text: "Respuesta correcta: es la hemoglobina que ha fijado monóxido de carbono" },
+            q15: { answer: "c", text: "Respuesta correcta: la LDH persiste aumentada a la semana de haberse producido el IAM" },
+            q16: { answer: "a", text: "Respuesta correcta: un pentapéptido señal para lípidos presente en el extremo amino terminal de la procolipasa" },
+            q17: { answer: "c", text: "Respuesta correcta: poseen la dotación completa de aminoácidos esenciales" },
+            q18: { answer: "d", text: "Respuesta correcta: 6-8 g%" },
+            q19: { answer: "b", text: "Respuesta correcta: representa el 90% del colágeno del cuerpo" },
+            q20: { answer: "d", text: "Respuesta correcta: un nucleósido" },
+            q21: { answer: "a", text: "Respuesta correcta: es el efecto que produce el aumento de la presión de CO2 y la disminución del pH en la disminución de la afinidad de la hemoglobina por el oxígeno" },
+            q22: { answer: "d", text: "Respuesta correcta: hiperbilirrubinemia conjugada; acolia; coluria" },
+            q23: { answer: "d", text: "Respuesta correcta: un micromol de sustrato en un minuto" },
+            q24: { answer: "d", text: "Respuesta correcta: aumenta la actividad de la citrato liasa hepática" },
+            q25: { answer: "a", text: "Respuesta correcta: aquellas situaciones en las que haya hiperglucagonemia" },
+            q26: { answer: "d", text: "Respuesta correcta: endopeptidasa; pH óptimo 8; actúa en especial sobre aminoácidos pequeños" },
+            q27: { answer: "d", text: "Respuesta correcta: glucoquinasa; glucosa 6 P deshidrogenasa; lipoproteinlipasa" },
+            q28: { answer: "c", text: "Respuesta correcta: succinato deshidrogenasa" },
+            q29: { answer: "b", text: "Respuesta correcta: deshidratación; aumento de la beta oxidación, de la uremia y de la cetogénesis" },
+            q30: { answer: "b", text: "Respuesta correcta: citrato; ciclo de Krebs" },
+            q31: { answer: "c", text: "Respuesta correcta: hipoglucemia; dislipidemia; hiperuricemia; acidosis láctica" },
+            q32: { answer: "a", text: "Respuesta correcta: vitamina E; anillo cromano unido a cadena isoprenoide" },
+            q33: { answer: "b", text: "Respuesta correcta: número de protones que posee un átomo en el núcleo" },
+            q34: { answer: "d", text: "Respuesta correcta: participa como coenzima en procesos de descarboxilación oxidativa" },
+            q35: { answer: "b", text: "Respuesta correcta: la carnitina es un aminoácido esencial que permite la traslocación de ácidos grasos" },
+            q36: { answer: "a", text: "Respuesta correcta: en su paso por la sangre recibió apo C y E de las HDL" },
+            q37: { answer: "a", text: "Respuesta correcta: fosfodiéster" },
+            q38: { answer: "b", text: "Respuesta correcta: un homopolisacárido lineal de beta-D-glucopiranosas en uniones beta 1,4" },
+            q39: { answer: "c", text: "Respuesta correcta: disminuye la formación de fructosa 2-6 difosfato" },
+            q40: { answer: "c", text: "Respuesta correcta: mitocondrial; requiere citocromo P 450, NADPH2 y oxígeno" },
+            q41: { answer: "b", text: "Respuesta correcta: 588 mEq" },
+            q42: { answer: "a", text: "Respuesta correcta: 5 gramos de D-glucosa por 100 ml de solución" },
+            q43: { answer: "d", text: "Respuesta correcta: bilirrubina" },
+            q44: { answer: "d", text: "Respuesta correcta: hemoglobina glicosilada" },
+            q45: { answer: "a", text: "Respuesta correcta: el pH donde toda la molécula tiene carga neutra" },
+            q46: { answer: "c", text: "Respuesta correcta: beta-D-galactopiranosa y alfa-D-glucopiranosa en unión beta 1-4" },
+            q47: { answer: "a", text: "Respuesta correcta: favorece la fosforólisis del glucógeno solamente a nivel del tejido hepático" },
+            q48: { answer: "c", text: "Respuesta correcta: es precursor del ácido araquidónico" },
+            q49: { answer: "c", text: "Respuesta correcta: +1" },
+            q50: { answer: "c", text: "Respuesta correcta: déficit de la enzima hipoxantina-guanina-fosforribosil transferasa" }
+        };
+
+        function checkAnswers() {
+            const form = document.getElementById('quizForm');
+            let correctCount = 0;
+            let totalQuestions = Object.keys(answers).length;
+
+            for (const [question, data] of Object.entries(answers)) {
+                const selected = form.querySelector(`input[name="${question}"]:checked`);
+                const feedbackDiv = document.getElementById(`feedback-${question}`);
+                if (selected) {
+                    if (selected.value === data.answer) {
+                        feedbackDiv.innerHTML = "Correcto ✅";
+                        feedbackDiv.className = "feedback correct";
+                        correctCount++;
+                    } else {
+                        feedbackDiv.innerHTML = `Incorrecto ❌. La respuesta correcta es: ${data.text}`;
+                        feedbackDiv.className = "feedback incorrect";
+                    }
+                } else {
+                    feedbackDiv.innerHTML = "Por favor, selecciona una opción.";
+                    feedbackDiv.className = "feedback incorrect";
+                }
+            }
+
+            // Mostrar resultado final
+            let resultDiv = document.getElementById('resultDiv');
+            if (!resultDiv) {
+                resultDiv = document.createElement('div');
+                resultDiv.id = 'resultDiv';
+                form.appendChild(resultDiv);
+            }
+            resultDiv.innerHTML = `Respuestas correctas: ${correctCount} / ${totalQuestions}`;
+        }
+    </script>
+</body>
